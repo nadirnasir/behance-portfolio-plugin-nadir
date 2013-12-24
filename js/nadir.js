@@ -6,9 +6,43 @@
  * Released under the [MIT license](http://nadir.pk/behance/LICENSE)
  */
 
-// Plugin definition.
-( function ( $ ) ) {
+
+( function ( $ )  {
 	$.fn.nadirFunction = function( options ) {
-		var optionsCollection = $.extend()
+		// Extending Plugin options so they can be passed from outside as well as through function.
+		var opts = $.extend( {}, $.fn.nadirFunction.defaults, options );
+		//console.log(opts);
+
+		var $daddy = this;
+		// "this" is "daddy" in a variable so that daddy can be referenced from everywhere.
+		//console.log($this);
+
+		$.each(opts,function(index, value){
+		    if($.type(value) === "object") {
+			    $.each(value,function(index, value){
+					    console.log(index + " : " + value);
+					    $this.css(index, value)
+					});
+		    }
+		    else if ($.type(value) === "string") {
+						console.log(index + ' : ' + value);
+				}
+		});
+
+		/*
+$.each(opts, function(i, object) {
+	    $.each(object, function(property, value) {
+	        console.log(property + "=" + value);
+	    });
+		});
+*/
+
+	}; // End of nadirFunction
+
+	// Default options
+	$.fn.nadirFunction.defaults = {
+		option1 : "red",
+		option2 : "green",
+		option3 : "blue",
 	}
-} ( jQuery );
+} ( jQuery ));

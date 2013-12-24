@@ -32,8 +32,9 @@
 
 <!-- CSS Styles -->
 <link rel="stylesheet" media="screen" href="css/nadir.css">
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!--<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/nadir.js"></script>
 </head>
 <body>
@@ -44,7 +45,15 @@
 <p>A simple plugin for displaying your Behancé Portfolio in your website.</p>
 </header>
 <section>
-    <div id='behance_container'><div>
+    <div id='behance_container'></div>
 </section>
+<script type="text/javascript">
+	$(document).ready( function() {
+		$("#behance_container").nadirFunction( {
+
+			"css"	:  { color: "yellow", background: "grey" },
+		});
+	});
+</script>
 </body>
 </html>
