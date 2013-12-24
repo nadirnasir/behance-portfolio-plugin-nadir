@@ -15,27 +15,21 @@
 
 		var $daddy = this;
 		// "this" is "daddy" in a variable so that daddy can be referenced from everywhere.
-		//console.log($this);
+		//console.log($daddy);
+
+		//console.log($.grep(opts);
 
 		$.each(opts,function(index, value){
 		    if($.type(value) === "object") {
 			    $.each(value,function(index, value){
 					    console.log(index + " : " + value);
-					    $this.css(index, value)
+					    $daddy.css(index, value)
 					});
 		    }
 		    else if ($.type(value) === "string") {
 						console.log(index + ' : ' + value);
 				}
 		});
-
-		/*
-$.each(opts, function(i, object) {
-	    $.each(object, function(property, value) {
-	        console.log(property + "=" + value);
-	    });
-		});
-*/
 
 	}; // End of nadirFunction
 
