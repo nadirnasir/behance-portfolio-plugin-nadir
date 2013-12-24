@@ -1,0 +1,143 @@
+/* Behancé Portfolio Plugin — By Nadir
+ * Source: https://github.com/nadirnasir/behance-portfolio-plugin-nadir.git
+ *
+ * Created by Nadir Nasir (@nadirnasir)
+ * Distributed through [Nadir.pk](http://nadir.pk/behance)
+ * Released under the [MIT license](http://nadir.pk/behance/LICENSE)
+ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight:normal;
+}
+
+
+/* End of Reset CSS */
+
+* {
+	-webkit-transition: all 0.8s ease-in-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: all 0.8s ease-in-out;  /* Firefox 4-15 */
+       -o-transition: all 0.8s ease-in-out;  /* Opera 10.50–12.00 */
+          transition: all 0.8s ease-in-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+body{
+	color: #fff;
+	background: #212121 url("../img/dark_leather.png") repeat;
+	font-family: 'lato', sans-serif;
+	font-weight: 100;
+	font-size: 1em;
+	padding: 10%;
+
+}
+
+a {
+	color: #dba903;
+	text-decoration: none;
+	padding: 0 3px;
+}
+
+a:hover {
+	/*color: #ffd139*/
+	background: #dba903;
+	color: #000;
+}
+h1 {
+	font-family: "Lato", sans-serif;
+	font-weight: 100;
+	font-size: 3em
+}
+h1 small {
+	font-size: small;
+}
+
+header {
+	margin-bottom: 50px;
+}
+
