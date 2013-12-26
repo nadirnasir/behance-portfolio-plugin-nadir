@@ -1,4 +1,4 @@
-/* Behancé Portfolio Plugin — By Nadir
+/* Behance Portfolio Plugin — By Nadir
  * Source: https://github.com/nadirnasir/behance-portfolio-plugin-nadir.git
  *
  * Created by Nadir Nasir (@nadirnasir)
@@ -9,7 +9,7 @@
 
 ( function ( $ )  {
 	$.fn.nadirFunction = function( options ) {
-		// Extending Plugin options so they can be passed from outside as well as through function.
+		// Extending Plugin options so they can be passed from outside as well as through functions.
 		var opts = $.extend( {}, $.fn.nadirFunction.defaults, options );
 		//console.log(opts);
 
@@ -18,7 +18,11 @@
 		//console.log($daddy);
 
 		//console.log($.grep(opts);
+var nums = '1,2,3,4,css,6,7,8,9,10'.split(',');
 
+
+
+console.log(nums) // 6,7,8,9,10
 		$.each(opts,function(index, value){
 		    if($.type(value) === "object") {
 			    $.each(value,function(index, value){

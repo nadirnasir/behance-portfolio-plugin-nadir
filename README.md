@@ -1,4 +1,10 @@
-behance-portfolio-plugin-nadir
-==============================
+Behance Portfolio jQuery Plugin by Nadir
+=================================
+A plugin to pull your Behance Portfolio in your own website.
+Website: [http://www.nadir.pk/behance](http://www.nadir.pk/behance)
 
-A plugin to pull your Behancé Portfolio in your own website.
+## v1.0 — To Do
+- Plan a structure for presenting the portfolio
+- Plan for actionable items
+- Plan out jQuery functions
+-- Sequence of functions
