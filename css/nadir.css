@@ -95,7 +95,9 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight:normal;
+	font-family: "Lato", sans-serif;
+	font-weight: 100;
+
 }
 
 
@@ -121,6 +123,8 @@ a {
 	color: #dba903;
 	text-decoration: none;
 	padding: 0 3px;
+	font-weight: 300;
+	border-radius: 2px;
 }
 
 a:hover {
@@ -129,9 +133,10 @@ a:hover {
 	color: #000;
 }
 h1 {
-	font-family: "Lato", sans-serif;
-	font-weight: 100;
-	font-size: 3em
+	font-size: 3em;
+	border-bottom: 1px solid #666;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
 }
 h1 small {
 	font-size: small;
@@ -139,5 +144,45 @@ h1 small {
 
 header {
 	margin-bottom: 50px;
+}
+
+.prjCard {
+	margin: 0px 25px 25px 0px;
+	padding: 10px;
+	float: left;
+	/* border: 1px solid rgba(255,255,255,0.3); */
+}
+
+.prjImg a {
+	display: block;
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+
+.prjTitle h3 {
+	margin: 5px 0 5px 0;
+	color: rgba(255,255,255,0.3);
+	font-size: 1.2em;
+}
+
+.prjField span,
+.prjMeta span {
+	padding: 3px 8px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	float: left;
+	background: rgba(255,255,255,0.1);
+	font-size: .7em;
+	border-radius: 3px;
+	text-transform: uppercase;
+	color: #999;
+	font-weight: 300;
+
+}
+.prjMeta {
+	clear: both;
+	font-size: .7em;
+	margin-top: 5px;
 }
 

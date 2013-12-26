@@ -7,4 +7,8 @@ Website: [http://www.nadir.pk/behance](http://www.nadir.pk/behance)
 - Plan a structure for presenting the portfolio
 - Plan for actionable items
 - Plan out jQuery functions
--- Sequence of functions
+- Sequence of functions
+- Set options for API Calls
+- Make API calls
+- Validate and handle API calls responses and errors
+-

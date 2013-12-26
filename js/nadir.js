@@ -17,12 +17,6 @@
 		// "this" is "daddy" in a variable so that daddy can be referenced from everywhere.
 		//console.log($daddy);
 
-		//console.log($.grep(opts);
-var nums = '1,2,3,4,css,6,7,8,9,10'.split(',');
-
-
-
-console.log(nums) // 6,7,8,9,10
 		$.each(opts,function(index, value){
 		    if($.type(value) === "object") {
 			    $.each(value,function(index, value){
