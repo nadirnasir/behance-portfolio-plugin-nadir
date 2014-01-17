@@ -1,3 +1,4 @@
+
 /* Behance Portfolio Plugin — By Nadir
  * Source: https://github.com/nadirnasir/behance-portfolio-plugin-nadir.git
  *
@@ -5,6 +6,11 @@
  * Distributed through [Nadir.pk](http://nadir.pk/behance)
  * Released under the [MIT license](http://nadir.pk/behance/LICENSE)
  */
+
+/*
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+*/
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -33,7 +39,8 @@ article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
     display:block;
 }
-nav ul {
+nav ul,
+ul {
     list-style:none;
 }
 blockquote, q {
@@ -51,18 +58,10 @@ a {
     vertical-align:baseline;
     background:transparent;
 }
-/* change colours to suit your needs */
 ins {
-    background-color:#ff9;
-    color:#000;
     text-decoration:none;
 }
-/* change colours to suit your needs */
 mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
 }
 del {
     text-decoration: line-through;
@@ -75,17 +74,28 @@ table {
     border-collapse:collapse;
     border-spacing:0;
 }
-/* change border colour to suit your needs */
 hr {
     display:block;
     height:1px;
     border:0;
-    border-top:1px solid #cccccc;
     margin:1em 0;
     padding:0;
 }
 input, select {
     vertical-align:middle;
+}
+
+
+html {
+	font-size: 62.5%;
+}
+body{
+	color: #777;
+	background: #212121 url("../img/dark_leather.png") repeat;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1.4em;
+	padding: 5% 10%;
 }
 
 
@@ -95,28 +105,29 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Lato", sans-serif;
-	font-weight: 100;
-
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	margin: 1em 0 .8em 0;
+	color: #fff;
 }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+}
+
 
 
 /* End of Reset CSS */
 
 * {
 	-webkit-transition: all 0.8s ease-in-out;  /* Chrome 1-25, Safari 3.2+ */
-     -moz-transition: all 0.8s ease-in-out;  /* Firefox 4-15 */
-       -o-transition: all 0.8s ease-in-out;  /* Opera 10.50–12.00 */
-          transition: all 0.8s ease-in-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
-}
-body{
-	color: #fff;
-	background: #212121 url("../img/dark_leather.png") repeat;
-	font-family: 'lato', sans-serif;
-	font-weight: 100;
-	font-size: 1em;
-	padding: 10%;
-
+       -moz-transition: all 0.8s ease-in-out;  /* Firefox 4-15 */
+         -o-transition: all 0.8s ease-in-out;  /* Opera 10.50–12.00 */
+            transition: all 0.8s ease-in-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 
 a {
@@ -128,12 +139,11 @@ a {
 }
 
 a:hover {
-	/*color: #ffd139*/
 	background: #dba903;
 	color: #000;
 }
 h1 {
-	font-size: 3em;
+	font-size: 3.6em;
 	border-bottom: 1px solid #666;
 	padding-bottom: 10px;
 	margin-bottom: 15px;
@@ -146,43 +156,211 @@ header {
 	margin-bottom: 50px;
 }
 
+#behancePortfolio {
+}
+
 .prjCard {
 	margin: 0px 25px 25px 0px;
 	padding: 10px;
 	float: left;
-	/* border: 1px solid rgba(255,255,255,0.3); */
+	position: relative;
+
+}
+.prjCard * {
+}
+.prjImg {
+	overflow: hidden;
+	max-width: 206px;
+	height: 164px
+}
+.prjImg a {
+	display: inline-block;
+	padding: 0px;
+	margin: 0;
+	position: relative;
+	background: none;
+	border: 2px solid #dba903 ;
+
 }
 
-.prjImg a {
+.prjImg a img {
+	-webkit-transform: rotate(0deg)  scale(1.2);
+	   -moz-transform: rotate(0deg)  scale(1.2);
+	    -ms-transform: rotate(0deg)  scale(1.2);
+	     -o-transform: rotate(0deg)  scale(1.2);
+		    transform: rotate(0deg)  scale(1.2);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	opacity: .8;
+}
+
+.prjImg a:hover img {
+	-webkit-transform: rotate(0deg)  scale(1);
+	   -moz-transform: rotate(0deg)  scale(1);
+	    -ms-transform: rotate(0deg)  scale(1);
+	     -o-transform: rotate(0deg)  scale(1);
+		    transform: rotate(0deg)  scale(1);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+
+.prjImg a span {
 	display: block;
-	padding: 0;
-	margin: 0;
+	position: absolute;
+	top: 	0px;
+	left: 	0px;
+	width: 100%;
+	height: 100%;
 	background: none;
+	background: -webkit-radial-gradient( center, ellipse cover, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, .9) 100% );
+	background:    -moz-radial-gradient( center, ellipse cover, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, .9) 100% );
+	background: 	-ms-radial-gradient( center, ellipse cover, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, .9) 100% );
+	background: 	 -o-radial-gradient( center, ellipse cover, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, .9) 100% );
+	background:  		radial-gradient( center, ellipse cover, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, .9) 100% );
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+.prjImg a:hover span {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+	filter: alpha(opacity=20);
+	opacity: .2;
 }
 
 .prjTitle h3 {
-	margin: 5px 0 5px 0;
-	color: rgba(255,255,255,0.3);
-	font-size: 1.2em;
+/* 	text-align: center; */
 }
-
 .prjField span,
 .prjMeta span {
 	padding: 3px 8px;
 	margin-left: 5px;
-	margin-bottom: 5px;
-	float: left;
+	margin-bottom: 3px;
+	/* float: left; */
+	text-align: left;
 	background: rgba(255,255,255,0.1);
 	font-size: .7em;
 	border-radius: 3px;
 	text-transform: uppercase;
 	color: #999;
 	font-weight: 300;
+	display: inline-block;
 
 }
 .prjMeta {
 	clear: both;
 	font-size: .7em;
 	margin-top: 5px;
+
 }
+
+
+.prjContent   {
+	position: fixed;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+	text-align:  center;
+	overflow: auto;
+}
+
+
+.prjData {
+}
+
+/*  Overlay Design  */
+
+.prjHeader {
+	bottom: 0;
+	max-width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	right: 0;
+	left: 0;
+	padding: 10px 20px 20px 20px;
+	line-height: normal;
+
+	background: rgba(0, 0, 0, .7);
+/*
+	background: -webkit-linear-gradient( top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 1) 100% );
+	background:    -moz-linear-gradient( top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 1) 100% );
+	background: 	-ms-linear-gradient( top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 1) 100% );
+	background: 	 -o-linear-gradient( top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 1) 100% );
+	background:  		linear-gradient( top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 1) 100% );
+*/
+
+}
+
+.prjDetailsContainer {
+	display: none;
+	position: fixed;
+	top: 0; left: 0; bottom: 0; right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	clear: both;
+	overflow: auto;
+
+	background: -webkit-radial-gradient( center, ellipse cover, rgba(220, 169, 2, .5) 20%, rgba(0, 0, 0, 1) 100% );
+	background:    -moz-radial-gradient( center, ellipse cover, rgba(220, 169, 2, .5) 20%, rgba(0, 0, 0, 1) 100% );
+	background: 	-ms-radial-gradient( center, ellipse cover, rgba(220, 169, 2, .5) 20%, rgba(0, 0, 0, 1) 100% );
+	background: 	 -o-radial-gradient( center, ellipse cover, rgba(220, 169, 2, .5) 20%, rgba(0, 0, 0, 1) 100% );
+	background:  		radial-gradient( center, ellipse cover, rgba(220, 169, 2, .5) 20%, rgba(0, 0, 0, 1) 100% );
+
+}
+
+.prjContent ul {
+	position: fixed;
+	top: 0; left: 0; bottom: 0; right: 0;
+	height: 100%;
+	overflow: auto;
+}
+
+.prjContent ul li {
+
+}
+.prjContent .item {
+
+}
+.prjContent .item img {
+	position: absolute;
+	top: -200%; left: 0; bottom: 0; right: 0;
+}
+
+.prjContent .item.active img {
+ 	max-height: 100%;
+ 	max-width: 100%;
+    opacity: 1;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, .8);
+	position: absolute;
+	top: 0; left: 0; bottom: 15%; right: 0;
+	margin: auto;
+}
+
+.prjNavPrev,
+.prjNavNext {
+	font-size: 2em;
+	position: absolute;
+	top: 40%;
+	padding: 0px 5px;
+	line-height: normal;
+}
+
+.prjNavPrev {
+	left: 3%;
+}
+
+.prjNavNext {
+	right: 3%;
+}
+/*
+@media (max-width: 768px) {
+	.prjContent .item.active img {
+		position: relative;
+		margin: auto 10%;
+	}
+}
+*/
 

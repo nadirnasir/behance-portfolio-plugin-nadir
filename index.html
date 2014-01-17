@@ -31,22 +31,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- CSS Styles -->
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600|Noto+Sans:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" media="screen" href="css/nadir.css">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Titillium+Web:400,200,300' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> -->
-<script type="text/javascript" src="js/nadir.js"></script>
+<link rel="stylesheet" media="print" href="css/print.css">
 </head>
 <body>
 
 <header>
 	<h1>Behance Portfolio Plugin <small>By <a href="http://www.nadir.pk/">Nadir</a></small></h1>
-<p>A simple plugin for displaying your Behance Portfolio in your website.</p>
+<p>A simple jQuery plugin for displaying your Behance Portfolio in your website.</p>
 </header>
 <section>
-    <div id='behance_container'></div>
-    <div class="prjCard">
-	    <div class="prjImg"><a href="#"><img src="img/temp/0bee34ae4302124297ac703041e345dd.png"></a></div>
+    <div id='behancePortfolio'>
+	    <div class="prjDetailsContainer" id="#[prjID]">
+	    <div class="prjContent">
+		    <div class="prjHeader">
+			    <div class="prjTitle"><h3><a href="#">Nadir.pk v2</a></h3></div>
+			    <p>Personal identity design revamp</p>
+			    <div class="prjField"><span>Design</span> <span>Direction</span> <span>Branding</span></div>
+			    <div class="prjMeta">
+				    <span class="prjAppr"><i class="ion-likes"></i> 500</span>
+				    <span class="prjViews"><i class="ion-likes"></i> 596</span>
+			    </div>
+		    </div>
+		    <div class="prjData"><ul>
+					<li class="item "><img src="img/temp/temp01/7a3231d7d88f054856ce1550a20e2208.png" /></li>
+					<li class="item "><img src="img/temp/temp01/25ad89fcd9ca0bb9097c146e111a6eaf.png" /></li>
+					<li class="item active"><img src="img/temp/temp01/5680c7dd44ac390129f2765627f08c48.png" /></li>
+					<li class="item "><img src="img/temp/temp01/7a3231d7d88f054856ce1550a20e2208.png" /></li>
+					<li class="item "><img src="img/temp/temp01/25ad89fcd9ca0bb9097c146e111a6eaf.png" /></li>
+					<li class="item "><img src="img/temp/temp01/5680c7dd44ac390129f2765627f08c48.png" /></li>
+				</ul>
+			</div>
+		    <div class="prjContentNavi">
+				<a class="prjNavPrev" href="#">
+					&lang;
+				</a>
+				<span
+				<a class="prjNavNext" href="#">
+					&rang;
+				</a>
+		    </div>
+
+		</div>
+    </div>
+	    <div class="prjCard">
+	    <div class="prjImg"><a href="#"><img src="img/temp/0bee34ae4302124297ac703041e345dd.png"><span></span></a></div>
 	    <div class="prjTitle"><h3><a href="#">Nadir.pk v2</a></h3></div>
 	    <div class="prjField"><span>Design</span> <span>Direction</span> <span>Branding</span></div>
 	    <div class="prjMeta">
@@ -54,8 +84,8 @@
 		    <span class="prjViews"><i class="ion-likes"></i> 596</span>
 	    </div>
     </div>
-    <div class="prjCard">
-	    <div class="prjImg"><a href="#"><img src="img/temp/2d59fae74e53104cf96ef30519d3f845.png"></a></div>
+	    <div class="prjCard">
+	    <div class="prjImg"><a href="#"><img src="img/temp/2d59fae74e53104cf96ef30519d3f845.png"><span></span></a></div>
 	    <div class="prjTitle"><h3><a href="#">Nadir.pk v2</a></h3></div>
 	    <div class="prjField"><span>Design</span> <span>Direction</span> <span>Branding</span></div>
 	    <div class="prjMeta">
@@ -63,7 +93,50 @@
 		    <span class="prjViews"><i class="ion-likes"></i> 596</span>
 	    </div>
     </div>
+	    <div class="prjCard">
+	    <div class="prjImg"><a href="#"><img src="img/temp/0bee34ae4302124297ac703041e345dd.png"><span></span></a></div>
+	    <div class="prjTitle"><h3><a href="#">Nadir.pk v2</a></h3></div>
+	    <div class="prjField"><span>Design</span> <span>Direction</span> <span>Branding</span></div>
+	    <div class="prjMeta">
+		    <span class="prjAppr"><i class="ion-likes"></i> 500</span>
+		    <span class="prjViews"><i class="ion-likes"></i> 596</span>
+	    </div>
+    </div>
+	    <div class="prjCard">
+	    <div class="prjImg"><a href="#"><img src="img/temp/2d59fae74e53104cf96ef30519d3f845.png"><span></span></a></div>
+	    <div class="prjTitle"><h3><a href="#">Nadir.pk v2</a></h3></div>
+	    <div class="prjField"><span>Design</span> <span>Direction</span> <span>Branding</span></div>
+	    <div class="prjMeta">
+		    <span class="prjAppr"><i class="ion-likes"></i> 500</span>
+		    <span class="prjViews"><i class="ion-likes"></i> 596</span>
+	    </div>
+    </div>
+	    <div class="prjCard">
+	    <div class="prjImg"><a href="#"><img src="img/temp/0bee34ae4302124297ac703041e345dd.png"><span></span></a></div>
+	    <div class="prjTitle"><h3><a href="#">Nadir.pk v2</a></h3></div>
+	    <div class="prjField"><span>Design</span> <span>Direction</span> <span>Branding</span></div>
+	    <div class="prjMeta">
+		    <span class="prjAppr"><i class="ion-likes"></i> 500</span>
+		    <span class="prjViews"><i class="ion-likes"></i> 596</span>
+	    </div>
+    </div>
+	    <div class="prjCard">
+	    <div class="prjImg"><a href="#"><img src="img/temp/2d59fae74e53104cf96ef30519d3f845.png"><span></span></a></div>
+	    <div class="prjTitle"><h3><a href="#">Nadir.pk v2</a></h3></div>
+	    <div class="prjField"><span>Design</span> <span>Direction</span> <span>Branding</span></div>
+	    <div class="prjMeta">
+		    <span class="prjAppr"><i class="ion-likes"></i> 500</span>
+		    <span class="prjViews"><i class="ion-likes"></i> 596</span>
+	    </div>
+    </div>
+	</div>
 </section>
+<div class="class">
+
+</div>
+<!-- Scripts -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/nadir.js"></script>
 <script type="text/javascript">
 	$(document).ready( function() {
 		$("#behance_container").nadirFunction( {
