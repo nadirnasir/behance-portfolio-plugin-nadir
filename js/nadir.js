@@ -41,6 +41,17 @@
 } ( jQuery ));
 */
 
+
+
+// // To do now;
+// Start Working on API calls
+
+
+
+
+
+
+
 // Project Data Slideshow
 
 var initialiseGallery = function (options) {
