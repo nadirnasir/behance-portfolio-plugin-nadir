@@ -43,7 +43,7 @@
 </header>
 <section>
     <div id='behancePortfolio'>
-	    <div class="prjDetailsContainer" id="#[prjID]">
+	    <div class="prjDetailsContainer" id="prjID321">
 	    <div class="prjContent">
 		    <div class="prjHeader">
 			    <div class="prjTitle"><h3><a href="#">Nadir.pk v2</a></h3></div>
@@ -54,22 +54,20 @@
 				    <span class="prjViews"><i class="ion-likes"></i> 596</span>
 			    </div>
 		    </div>
-		    <div class="prjData"><ul>
+		    <div class="prjData">
+			    <ul>
 					<li class="item "><img src="img/temp/temp01/7a3231d7d88f054856ce1550a20e2208.png" /></li>
 					<li class="item "><img src="img/temp/temp01/25ad89fcd9ca0bb9097c146e111a6eaf.png" /></li>
-					<li class="item active"><img src="img/temp/temp01/5680c7dd44ac390129f2765627f08c48.png" /></li>
+					<li class="item "><img src="img/temp/temp01/5680c7dd44ac390129f2765627f08c48.png" /></li>
 					<li class="item "><img src="img/temp/temp01/7a3231d7d88f054856ce1550a20e2208.png" /></li>
 					<li class="item "><img src="img/temp/temp01/25ad89fcd9ca0bb9097c146e111a6eaf.png" /></li>
 					<li class="item "><img src="img/temp/temp01/5680c7dd44ac390129f2765627f08c48.png" /></li>
 				</ul>
 			</div>
 		    <div class="prjContentNavi">
-				<a class="prjNavPrev" href="#">
-					&lang;
+				<a class="prjNav Prev icon-left" disabled href="#">
 				</a>
-				<span
-				<a class="prjNavNext" href="#">
-					&rang;
+				<a class="prjNav Next icon-right" href="#">
 				</a>
 		    </div>
 
@@ -139,10 +137,70 @@
 <script type="text/javascript" src="js/nadir.js"></script>
 <script type="text/javascript">
 	$(document).ready( function() {
-		$("#behance_container").nadirFunction( {
+
+
+	/*
+	$("#behance_container").nadirFunction( {
 			"css"	:  { color: "yellow", background: "grey" },
 		});
-	});
+*/
+
+
+/*
+
+		//console.log($("#prjID321 .prjData ul").children(".active").index());
+		$(".prjNav").click(function(){
+			target	= $("#prjID321 .prjData ul");
+			current = $(target).children(".active").removeClass("active");
+
+			if($(this).hasClass("Next")) {
+				var i = current.next().length ? current.index() : 0;
+		        current.siblings(":eq(" + i + ")").addClass("active");
+				prjDataCounter();
+			}
+			else if($(this).hasClass("Prev")) {
+				var i = current.prev().length ? (current.index()-1) : (target.children().length-2);
+		        current.siblings(":eq(" + i + ")").addClass("active");
+		        $(".prjDataCount").html( ($(target).children(".active").index()+1) + " of " + $(target).children().length	);
+		        prjDataCounter();
+			}
+
+			function prjDataCounter() {
+
+		        if(!target.parent().find(".prjDataCount").length) {
+					target.before("<div class=\"prjDataCount\">" + ($(target).children(".active").index()+1) + " of " + $(target).children().length + "</div>")
+		        }
+				else {
+					$(".prjDataCount").html(($(target).children(".active").index()+1) + " of " + $(target).children().length);
+				}
+			}
+		})
+
+*/
+	prjDataSetActive(settings.prjDataContainer);
+	prjDataNavigator(settings.prjNavigator, settings.prjDataContainer);
+/*
+
+	var settings = {
+		s1: "v1",
+		s2: "v2",
+	}
+	console.log(settings);
+
+	var addSettings = function(){
+		$.extend(settings, {more: "shit"})
+	}
+
+	var addMoreSettings = function(){
+		$.extend(settings, {evenmore: "moreshit"})
+	}
+
+	addSettings();
+	console.log(settings);
+	addMoreSettings()
+	console.log(settings);
+*/
+	}); // document.ready
 </script>
 </body>
 </html>

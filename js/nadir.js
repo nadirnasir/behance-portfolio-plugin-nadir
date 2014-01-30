@@ -6,6 +6,7 @@
  * Released under the [MIT license](http://nadir.pk/behance/LICENSE)
  */
 
+/*
 
 ( function ( $ )  {
 	$.fn.nadirFunction = function( options ) {
@@ -38,3 +39,47 @@
 		option3 : "blue",
 	}
 } ( jQuery ));
+*/
+
+// Project Data Slideshow
+
+var settings = {
+	prjDataContainer 	: "#prjID321 .prjData ul",
+	prjNavigator		: ".prjNav"
+
+}
+
+console.log(settings)
+
+
+var prjDataSetActive = function (prjDataContainer) {
+	$(prjDataContainer).children().first().addClass("active");
+	prjDataCounter()
+} //prjDataSetActive()
+
+function prjDataCounter() {
+    if(!$(settings.prjDataContainer).parent().find(".prjDataCount").length) {
+		$(settings.prjDataContainer).before("<div class=\"prjDataCount\"></div>");
+		$(".prjDataCount").html(($(settings.prjDataContainer).children(".active").index()+1) + " of " + $(settings.prjDataContainer).children().length);
+    } else {
+		$(".prjDataCount").html(($(settings.prjDataContainer).children(".active").index()+1) + " of " + $(settings.prjDataContainer).children().length);
+	}
+
+} // prjDataCounter()
+
+function prjDataNavigator(navigation, navigated) { // Navigation -> Left/right buttons, Navigated -> DIV with slides
+	$(navigation).click(function(){
+	var current = $(navigated).children(".active").removeClass("active");
+		if($(this).hasClass("Next")) {
+
+			var i = current.next().length ? current.index() : 0;
+	        current.siblings(":eq(" + i + ")").addClass("active");
+		}
+		else if($(this).hasClass("Prev")) {
+			var i = current.prev().length ? (current.index()-1) : ($(navigated).children().length-2);
+	        current.siblings(":eq(" + i + ")").addClass("active");
+		}
+		prjDataCounter();
+	})
+} // prjDataNavigator
+
