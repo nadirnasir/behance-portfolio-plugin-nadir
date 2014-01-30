@@ -143,63 +143,10 @@
 	$("#behance_container").nadirFunction( {
 			"css"	:  { color: "yellow", background: "grey" },
 		});
-*/
+		*/
 
+	initialiseGallery()
 
-/*
-
-		//console.log($("#prjID321 .prjData ul").children(".active").index());
-		$(".prjNav").click(function(){
-			target	= $("#prjID321 .prjData ul");
-			current = $(target).children(".active").removeClass("active");
-
-			if($(this).hasClass("Next")) {
-				var i = current.next().length ? current.index() : 0;
-		        current.siblings(":eq(" + i + ")").addClass("active");
-				prjDataCounter();
-			}
-			else if($(this).hasClass("Prev")) {
-				var i = current.prev().length ? (current.index()-1) : (target.children().length-2);
-		        current.siblings(":eq(" + i + ")").addClass("active");
-		        $(".prjDataCount").html( ($(target).children(".active").index()+1) + " of " + $(target).children().length	);
-		        prjDataCounter();
-			}
-
-			function prjDataCounter() {
-
-		        if(!target.parent().find(".prjDataCount").length) {
-					target.before("<div class=\"prjDataCount\">" + ($(target).children(".active").index()+1) + " of " + $(target).children().length + "</div>")
-		        }
-				else {
-					$(".prjDataCount").html(($(target).children(".active").index()+1) + " of " + $(target).children().length);
-				}
-			}
-		})
-
-*/
-	prjDataSetActive(settings.prjDataContainer);
-	prjDataNavigator(settings.prjNavigator, settings.prjDataContainer);
-/*
-
-	var settings = {
-		s1: "v1",
-		s2: "v2",
-	}
-	console.log(settings);
-
-	var addSettings = function(){
-		$.extend(settings, {more: "shit"})
-	}
-
-	var addMoreSettings = function(){
-		$.extend(settings, {evenmore: "moreshit"})
-	}
-
-	addSettings();
-	console.log(settings);
-	addMoreSettings()
-	console.log(settings);
-*/
 	}); // document.ready
 </script>
 </body>
